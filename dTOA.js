@@ -168,7 +168,7 @@ console.log(password.length >= 5);
 console.log(password.includes(username) == false);
 console.log(username.length <= 20);
 
-let whiteSpace = (username.trim() == username) && (password.trim() == password)
+let whiteSpace = (username.trim() === username) && (password.trim() === password)
 
 
 
