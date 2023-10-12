@@ -73,7 +73,7 @@ console.log(isNaN(false))
 console.log(!true)
 !false
 //true
-console.log(!false3)
+console.log(!false)
 !!true
 //true
 console.log(!!true)
@@ -106,7 +106,7 @@ console.log(!!"")
 console.log(!!'')
 !!"false"
 //true
-console.log(!!)
+console.log(!!'')
 !!"0"
 //true
 console.log(!!"0")
