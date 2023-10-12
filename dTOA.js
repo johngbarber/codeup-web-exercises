@@ -132,23 +132,29 @@ let sample = "Hello Codeup";
 console.log(sample);
 console.log(sample.length);
 console.log(sample.toLowerCase());
+//Concatenate sample to add Students
 sample = sample + " Students";
 console.log(sample);
+//replace students with class
 sample = sample.replace("Students", "Class");
 console.log(sample);
+//index of lower case c - will not return a valid result
 console.log(sample.indexOf("c"));
+//index of upper case C
 console.log(sample.indexOf("C"));
+//retrieve a substring with a value of codeup
 let sample2 = sample.substring(sample.indexOf("C"),1 + sample.indexOf("p"));
 console.log(sample2);
 
 //exercise 3
-
+//Movie rentals
 let merm = 3;
 let bear = 5;
 let herc = 1;
 let movietotal = (merm + bear + herc) * 3
 console.log(`The total price for rentals is $${movietotal}`);
 
+//contract pay
 let goog = 400 * 6;
 let amaz = 380 * 4;
 let face = 350 * 10;
@@ -158,7 +164,7 @@ console.log(`Total pay is $${pay}`);
 let username = 'codeup';
 let password = 'notastrongpassword';
 console.log(password.length >= 5);
-console.log(password.includes("codeup") == false);
+console.log(password.includes(username) == false);
 console.log(username.length <= 20);
 console.log(username.includes(" ", 0) == false);
 console.log(password.includes(" ", 0) == false);
