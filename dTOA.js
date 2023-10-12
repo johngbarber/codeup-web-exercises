@@ -110,3 +110,47 @@ console.log(!!'')
 !!"0"
 //true
 console.log(!!"0")
+
+//exercise 2
+
+let sample = "Hello Codeup";
+console.log(sample);
+console.log(sample.length);
+console.log(sample.toLowerCase());
+sample = sample + " Students";
+console.log(sample);
+sample = sample.replace("Students", "Class");
+console.log(sample);
+console.log(sample.indexOf("c"));
+console.log(sample.indexOf("C"));
+let sample2 = sample.substring(sample.indexOf("C"),1 + sample.indexOf("p"));
+console.log(sample2);
+
+//exercise 3
+
+let merm = 3;
+let bear = 5;
+let herc = 1;
+let movietotal = (merm + bear + herc) * 3
+console.log(`The total price for rentals is $${movietotal}`);
+
+let goog = 400 * 6;
+let amaz = 380 * 4;
+let face = 350 * 10;
+let pay = goog + amaz + face;
+console.log(`Total pay is $${pay}`);
+
+let username = 'codeup';
+let password = 'notastrongpassword';
+console.log(password.length >= 5);
+console.log(password.includes("codeup") == false);
+console.log(username.length <= 20);
+console.log(username.includes(" ", 0) == false);
+console.log(password.includes(" ", 0) == false);
+
+
+
+
+
+
+
