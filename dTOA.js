@@ -1,3 +1,4 @@
+//exercise 1
 let a =1
 //a = 1
 console.log(a)
@@ -68,48 +69,62 @@ console.log(isNaN("false"))
 isNaN(false)
 //false
 console.log(isNaN(false))
-!true
-//false
-console.log(!true)
-!false
-//true
-console.log(!false)
-!!true
-//true
-console.log(!!true)
-!!false
-//true
-console.log(!!false)
-!!0
-//true
-console.log(!!0)
-!!-0
-//false
-console.log(!!-0)
-!!1
-//true
-console.log(!!1)
-!!-1
-//true
-console.log(!!-1)
-!!0.1
-//true
-console.log(!!0.1)
-!!"hello"
-//true
-console.log(!!"hello")
-!!""
-//false
-console.log(!!"")
-!!''
-//false
-console.log(!!'')
-!!"false"
-//true
-console.log(!!'')
-!!"0"
-//true
-console.log(!!"0")
+
+!true;
+//false;
+console.log(!true);
+
+!false;
+//true;
+console.log(!false);
+
+!!true;
+//true;
+console.log(!!true);
+
+!!false;
+//false;
+console.log(!!false);
+
+!!0;
+//true;
+console.log(!!0);
+
+!!-0;
+//false;
+console.log(!!-0);
+
+!!1;
+//true;
+console.log(!!1);
+
+!!-1;
+//true;
+console.log(!!-1);
+
+!!0.1;
+//true;
+console.log(!!0.1);
+
+!!"hello";
+//true;
+console.log(!!"hello");
+
+!!"";
+//false;
+console.log(!!"");
+
+!!'';
+//false;
+console.log(!!'');
+
+!!"false";
+//true;
+console.log(!!'false');
+
+!!"0";
+//true;
+console.log(!!"0");
 
 //exercise 2
 
@@ -147,6 +162,10 @@ console.log(password.includes("codeup") == false);
 console.log(username.length <= 20);
 console.log(username.includes(" ", 0) == false);
 console.log(password.includes(" ", 0) == false);
+let numlet = '123'
+console.log(Number(numlet).toFixed(2))
+
+
 
 
 
