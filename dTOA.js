@@ -161,15 +161,16 @@ let face = 350 * 10;
 let pay = goog + amaz + face;
 console.log(`Total pay is $${pay}`);
 
+//password processing
 let username = 'codeup';
 let password = 'notastrongpassword';
 console.log(password.length >= 5);
 console.log(password.includes(username) == false);
 console.log(username.length <= 20);
-console.log(username.includes(" ", 0) == false);
-console.log(password.includes(" ", 0) == false);
-let numlet = '123'
-console.log(Number(numlet).toFixed(2))
+
+let whiteSpace = (username.trim() == username) && (password.trim() == password)
+
+
 
 
 
