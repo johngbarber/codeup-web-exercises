@@ -7,7 +7,7 @@ let color = prompt("What is your favorite color?");
 alert(`Great, ${color} is my favorite color too!`);
 
 //movie rental total
-alert("You have rented some movies for your kids, 'The Little Mermaid', 'Brother Bear'. and 'Hercules.' Please tell me how many days you would like to rent each movie for in order to calculate your total.");
+alert("You have rented some movies for your kids, 'The Little Mermaid', 'Brother Bear'. and 'Hercules.' Please tell me how many days you would like to rent each movie for in order to calculate your total. Movies cost $3 per day");
 let mermaid= parseInt(prompt("How many days for 'The little Mermaid?'"));
 let bear =parseInt(prompt("How many days for 'Brother Bear?'"));
 let hercules =parseInt(prompt("'Hercules?'"));
