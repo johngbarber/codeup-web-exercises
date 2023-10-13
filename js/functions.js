@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 
 /**
  * TODO:
@@ -8,11 +8,11 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name= 'Ivan') {
+function sayHello(name= 'John') {
     return `Hello, ${name}!`
 }
 
-sayHello(); // "Hello, Ivan!"
+sayHello(); // "Hello, John!"
 console.log(sayHello('codeup'))
 /**
  * TODO:
@@ -21,14 +21,21 @@ console.log(sayHello('codeup'))
  *
  * console.log 'helloMessage' to check your work
  */
+function sayHello(name= 'John') {
+    return `Hello, ${name}!`
+}
 
+let helloMessage = sayHello(); // "Hello, John!"
+console.log(helloMessage)
+//console.log(sayHello('codeup'))
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-
+let myName = 'John'
+console.log(sayHello(myName))
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 const random = Math.floor((Math.random() * 3) + 1);
@@ -50,7 +57,7 @@ const random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-
+function isTwo(random, == 2)
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
