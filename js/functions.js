@@ -27,7 +27,7 @@ function sayHello(name= 'John') {
 
 let helloMessage = sayHello(); // "Hello, John!"
 console.log(helloMessage)
-//console.log(sayHello('codeup'))
+console.log(sayHello('codeup'))
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -57,7 +57,11 @@ const random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(random, == 2)
+function isTwo(wantTwo) {
+    return (wantTwo === 2)
+}
+
+console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -69,14 +73,21 @@ function isTwo(random, == 2)
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(percentage, tab){
+    return (percentage * tab).toFixed(2)
+}
 
+console.log(calculateTip(.25, 25));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
+let percentage2 = parseInt(prompt("What percentage would you like to tip?"))
+let tab2 = parseInt(prompt("What was the total tab for your meal?"))
+let total2 = (tab2 *(percentage2/100).toFixed(2)) + tab2
+alert(`You total after tip is ${total2}`)
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -91,3 +102,6 @@ function isTwo(random, == 2)
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+const applyDisctount= (originalPrice, discountPercent) => (originalPrice) - ((originalPrice) * (discountPercent))
+
+console.log(applyDisctount(15, .2))
