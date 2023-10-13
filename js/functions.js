@@ -102,6 +102,6 @@ alert(`You total after tip is ${total2}`)
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-const applyDisctount= (originalPrice, discountPercent) => (originalPrice) - ((originalPrice) * (discountPercent))
+const applyDiscount= (originalPrice, discountPercent) => (originalPrice) - ((originalPrice) * (discountPercent))
 
-console.log(applyDisctount(15, .2))
+console.log(applyDiscount(15, .2))
