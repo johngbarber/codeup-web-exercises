@@ -10,3 +10,15 @@ function capitalizeFirstLetter(animal) {
 }
 let animal = prompt("What is your favorite animal?")
 console.log(capitalizeFirstLetter(animal))
+
+//This is a second solution that was demonstrated in class.
+// const capitalizeFirstLetter2 = (str) => {
+//     console.log(str);
+//     let firstLetter = str.substring(0,1);
+//     let capitalizedFirstLetter = firstLetter.toUpperCase()
+//     let restOfWord = str.substring(1)
+//     return capitalizedFirstLetter + restOfWord
+//
+// }
+
+const capitalizeFirstLetter = str => str.substring(0,1).toUpperCase() + str.substring(1);

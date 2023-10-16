@@ -29,7 +29,11 @@ if (analyzeColor === "red") {
     alert ("Blue is the color of the sky.")
 } else if (analyzeColor === "green"){
     alert ("Green is the color of the grass, which grows thick from the red enemy blood.")
-} else if ("")
+} else if (analyzeColor = "purple") {
+    alert ("Purple is Corey's favorite color.")
+} else {
+    alert(`I don't know anything about ${analyzeColor}`)
+}
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
