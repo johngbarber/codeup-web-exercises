@@ -76,7 +76,7 @@ function calculateTip(percentage, tab){
     return ((percentage / 100).toFixed(2) * tab)
 }
 
-console.log(calculateTip(.25, 25));
+console.log(calculateTip(25, 25));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
