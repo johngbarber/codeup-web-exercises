@@ -8,11 +8,11 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name= 'John') {
+function sayHello(name) {
     return `Hello, ${name}!`
 }
 
-sayHello(); // "Hello, John!"
+sayHello();
 console.log(sayHello('codeup'))
 /**
  * TODO:
@@ -21,21 +21,20 @@ console.log(sayHello('codeup'))
  *
  * console.log 'helloMessage' to check your work
  */
-function sayHello(name= 'John') {
-    return `Hello, ${name}!`
-}
 
-let helloMessage = sayHello(); // "Hello, John!"
-console.log(helloMessage)
-console.log(sayHello('codeup'))
+let helloMessage = sayHello('John');
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-let myName = 'John'
-console.log(sayHello(myName))
+
+let myName = 'John';
+console.log(sayHello(myName));
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 const random = Math.floor((Math.random() * 3) + 1);
