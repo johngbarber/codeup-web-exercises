@@ -74,7 +74,7 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(percentage, tab){
-    return (percentage * tab).toFixed(2)
+    return ((percentage / 100).toFixed(2) * tab)
 }
 
 console.log(calculateTip(.25, 25));
@@ -86,8 +86,8 @@ console.log(calculateTip(.25, 25));
  */
 let percentage2 = parseInt(prompt("What percentage would you like to tip?"))
 let tab2 = parseInt(prompt("What was the total tab for your meal?"))
-let total2 = (tab2 *(percentage2/100).toFixed(2)) + tab2
-alert(`You total after tip is ${total2}`)
+
+alert(`You total tip is $${calculateTip(percentage2, tab2)}`)
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
