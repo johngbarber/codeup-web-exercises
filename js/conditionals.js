@@ -188,12 +188,12 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 function analyzeNumber() {
     // Ask the user if they want to enter a number
-    var wantToEnterNumber = confirm("Would you like to enter a number?");
+    let wantToEnterNumber = confirm("Would you like to enter a number?");
 
     // If the user clicks 'OK', proceed to ask for a number
     if (wantToEnterNumber) {
         // Prompt the user for a number
-        var userNumber = prompt("Enter a number:");
+        let userNumber = prompt("Enter a number:");
 
         // Check if the input is a valid number
         if (!isNaN(userNumber)) {
@@ -201,15 +201,15 @@ function analyzeNumber() {
             userNumber = parseFloat(userNumber);
 
             // Check if the number is even or odd and display the result
-            var evenOrOdd = userNumber % 2 === 0 ? "even" : "odd";
+            let evenOrOdd = userNumber % 2 === 0 ? "even" : "odd";
             alert("The number is " + evenOrOdd + ".");
 
             // Calculate the number plus 100 and display the result
-            var numberPlus100 = userNumber + 100;
+            let numberPlus100 = userNumber + 100;
             alert("The number plus 100 is: " + numberPlus100);
 
             // Check if the number is positive or negative and display the result
-            var positiveOrNegative = userNumber >= 0 ? "positive" : "negative";
+            let positiveOrNegative = userNumber >= 0 ? "positive" : "negative";
             alert("The number is " + positiveOrNegative + ".");
         } else {
             // Display an alert if the input is not a valid number
@@ -224,3 +224,4 @@ function analyzeNumber() {
 // Call the function to start the analysis
 analyzeNumber();
 
+typeof number
