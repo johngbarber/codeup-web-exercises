@@ -164,24 +164,63 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // let userConfirm = confirm("Do you want to play a game?");
 
-let userConfirm = confirm("Do you want to play a game?");
+// let userConfirm = confirm("Do you want to play a game?");
+//
+// function numberGame() {
+//     let userNumber
+//     if (userConfirm) {
+//        userNumber = parseInt(prompt("Enter any positive or negative integer."))
+//     }
+//      if (userNumber === 0) {
+//             alert("0 is neither positiver or negative, even or odd, and totals 100 when added to 100.")
+//     } else if (!isNaN(userNumber)){
+// //TERNARY - multiple times
+//          alert(userNumber % 2 === 0 ? "Your number is even" : "Your Number is odd")
+//          alert(userNumber > 0 ? "You number is positive" : "Your number is negative")
+//          alert(`You number plus 100 is ${userNumber + 100}`)
+//     }else {
+//          alert("Sorry, this is not a number")
+//      }
+//
+// }
+//
+// numberGame()
 
-function numberGame() {
-    let userNumber
-    if (userConfirm) {
-       userNumber = parseInt(prompt("Enter any positive or negative integer."))
+function analyzeNumber() {
+    // Ask the user if they want to enter a number
+    var wantToEnterNumber = confirm("Would you like to enter a number?");
+
+    // If the user clicks 'OK', proceed to ask for a number
+    if (wantToEnterNumber) {
+        // Prompt the user for a number
+        var userNumber = prompt("Enter a number:");
+
+        // Check if the input is a valid number
+        if (!isNaN(userNumber)) {
+            // Convert the input to a number
+            userNumber = parseFloat(userNumber);
+
+            // Check if the number is even or odd and display the result
+            var evenOrOdd = userNumber % 2 === 0 ? "even" : "odd";
+            alert("The number is " + evenOrOdd + ".");
+
+            // Calculate the number plus 100 and display the result
+            var numberPlus100 = userNumber + 100;
+            alert("The number plus 100 is: " + numberPlus100);
+
+            // Check if the number is positive or negative and display the result
+            var positiveOrNegative = userNumber >= 0 ? "positive" : "negative";
+            alert("The number is " + positiveOrNegative + ".");
+        } else {
+            // Display an alert if the input is not a valid number
+            alert("Invalid input. Please enter a valid number.");
+        }
+    } else {
+        // Display a message if the user clicks 'Cancel'
+        alert("You chose not to enter a number. Goodbye!");
     }
-     if (userNumber === 0) {
-            alert("0 is neither positiver or negative, even or odd, and totals 100 when added to 100.")
-    } else if (!isNaN(userNumber)){
-//TERNARY - multiple times
-         alert(userNumber % 2 === 0 ? "Your number is even" : "Your Number is odd")
-         alert(userNumber > 0 ? "You number is positive" : "Your number is negative")
-         alert(`You number plus 100 is ${userNumber + 100}`)
-    }else {
-         alert("Sorry, this is not a number")
-     }
-
 }
 
-numberGame()
+// Call the function to start the analysis
+analyzeNumber();
+
