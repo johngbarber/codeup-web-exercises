@@ -29,7 +29,7 @@
 //         console.log("Blue is the color of the sky.")
 //     } else if (analyzeColor === "green") {
 //         console.log("Green is the color of the grass, which grows thick from the red enemy blood.")
-//     } else if (analyzeColor = "purple") {
+//     } else if (analyzeColor === "purple") {
 //         console.log("Purple is Corey's favorite color.")
 //     } else {
 //         console.log(`I don't know anything about ${analyzeColor}`)
@@ -56,7 +56,7 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 // let switchcolor = randomColor;
 //
 // switch (switchcolor) {
-//     case 'red' : alert("Red is the color of the enemies spilled blood.");
+//     case 'red' : alert("Red is the color of the enemy's spilled blood.");
 //         break;
 //     case 'orange' : alert("Oranges are the best fruit.");
 //         break;
