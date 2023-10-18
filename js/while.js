@@ -1,9 +1,9 @@
 //while loop
 
-let num=2;
-while (num <= 65536) {
-    console.log(num);
+let num=1;
+while (num < 65536) {
     num *= 2
+    console.log(num);
 }
 
 //Use a do-while loop to simulate selling ice cream cones
@@ -17,7 +17,7 @@ console.log(`Initial number of cones to sell: ${totalCones}`);
 do {
     // Generate a random number between 1 and 5 representing the amount of cones being bought
     let conesBought = Math.floor(Math.random() * 5) + 1;
-
+    console.log(totalCones)
     // Ensure that the number of cones to sell is not negative
     if (conesBought <= totalCones) {
         totalCones -= conesBought;
