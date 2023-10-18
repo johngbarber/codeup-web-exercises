@@ -68,7 +68,10 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         break;
 //     case 'indgo' : alert("Indigo is the color of blue jeans.")
 //         break;
+//         case 'violet' : alert("Violet is the color of wine cup flowers.")
+//         break;
 // }
+//console.log(switchcolor)
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -109,23 +112,23 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-// function calculateTotal(luckyNumber, subTotal){
-//     let discount;
-//     if (luckyNumber === 0) {
-//          discount = 0
-//     } else if (luckyNumber === 1) {
-//         discount = .1
-//     } else if (luckyNumber === 2) {
-//         discount =.25
-//     } else if (luckyNumber === 3) {
-//         discount = .35
-//     } else if (luckyNumber === 4) {
-//         discount = .5
-//     } else if (luckyNumber === 5) {
-//         discount = 1
-//     }
-//     return subTotal - (subTotal * discount)
-// }
+function calculateTotal(luckyNumber, subTotal){
+    let discount;
+    if (luckyNumber === 0) {
+         discount = 0
+    } else if (luckyNumber === 1) {
+        discount = .1
+    } else if (luckyNumber === 2) {
+        discount =.25
+    } else if (luckyNumber === 3) {
+        discount = .35
+    } else if (luckyNumber === 4) {
+        discount = .5
+    } else if (luckyNumber === 5) {
+        discount = 1
+    }
+    return subTotal - (subTotal * discount)
+}
 
 
 
@@ -138,11 +141,11 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// const luckyNumber = Math.floor(Math.random() * 6);
-//
-// let subTotal = parseFloat(prompt("What is your subtotal?"))
-//
-// alert(`Your lucky number is ${luckyNumber}, your price before discount was $${subTotal}, and your total after discount is ${parseFloat(calculateTotal(luckyNumber, subTotal))}`)
+const luckyNumber = Math.floor(Math.random() * 6);
+
+let subTotal = parseFloat(prompt("What is your subtotal?"))
+
+alert(`Your lucky number is ${luckyNumber}, your price before discount was $${subTotal}, and your total after discount is ${parseFloat(calculateTotal(luckyNumber, subTotal), 2)}`)
 
 /**
  * TODO:
@@ -162,12 +165,12 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-// let userConfirm = confirm("Do you want to play a game?");
+
 
 // let userConfirm = confirm("Do you want to play a game?");
 //
 // function numberGame() {
-//     let userNumber
+//     let userNumber;
 //     if (userConfirm) {
 //        userNumber = parseInt(prompt("Enter any positive or negative integer."))
 //     }
@@ -223,5 +226,3 @@ function analyzeNumber() {
 
 // Call the function to start the analysis
 analyzeNumber();
-
-typeof number
