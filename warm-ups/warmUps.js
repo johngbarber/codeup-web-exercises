@@ -41,12 +41,21 @@
 // largestNum()
 
 // create a while loop that starts at num =100
-let num = 100
-do {
-    num -= 5
-    if (num % 2 === 0 && num !== 0) {
-        console.log(`${num} is even`);
-    } else {
-        console.log(num);
+// let num = 100
+// do {
+//     num -= 5
+//     if (num % 2 === 0 && num !== 0) {
+//         console.log(`${num} is even`);
+//     } else {
+//         console.log(num);
+//     }
+// } while (num > 0);
+function evenNumbers(){
+    for (let i = 2; i <= 100; i += 2) {
+        console.log(i)
+
     }
-} while (num > 0);
+}
+
+evenNumbers()
+
