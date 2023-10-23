@@ -63,7 +63,7 @@ function playGame() {
         if (row >= 0 && row < 3 && col >= 0 && col < 3) {
             if (makeMove(row, col)) {
                 if (checkWin()) {
-                    printBoard();
+                    printBoard();0,0
                     console.log(`Player ${currentPlayer} wins!`);
                     rl.close();
                 } else {

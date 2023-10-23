@@ -50,12 +50,22 @@
 //         console.log(num);
 //     }
 // } while (num > 0);
-function evenNumbers(){
-    for (let i = 2; i <= 100; i += 2) {
-        console.log(i)
+// function evenNumbers(){
+//     for (let i = 2; i <= 100; i += 2) {
+//         console.log(i)
+//
+//     }
+// }
+//
+// evenNumbers()
 
-    }
-}
+// Create an array of at least five of your favorite movies movies. create a for each loop ( or a for od loop) to console log all of your movies in alphabetical order.
 
-evenNumbers()
-
+const movies = ['Die Hard', 'Die Hard 2', 'Die Hard with a Vengeance', 'Live Free or Die Hard', 'A Good Day to Die Hard' ]
+// sort the array
+movies.sort();
+//console log the array using a for each loop
+console.log('My Favorite Movies in Alphabetical Order');
+movies.forEach((movie => {
+    console.log(movie)
+}))
