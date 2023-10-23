@@ -25,8 +25,10 @@
      * string, and <li> tags around each planet.
      */
 
-    let planetsSting=planetsArray.join(" <br/> ")
-    console.log(planetsSting);
+    let planetsSting2= planetsArray.join(`
+<br/>
+`)
+    console.log(planetsSting2);
 
     let planetsInList = '<ul>';
     for (let i = 0; i < planetsArray.length; i++) {
@@ -34,5 +36,5 @@
     }
     planetsInList += '</ul>';
     console.log(planetsInList);
-
 })();
+

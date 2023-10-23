@@ -40,8 +40,8 @@ function choice(input) {
 
 
 }
+
 function choiceTernary(input){
-    let input = prompt('Input a choice based on the options of ${choicesArray}')
     return input === steak ? console.log("Your randomized recommendation for steak is " + steak[randomNumber()])
         : input === american ? console.log("Your randomized recommendation for american is " + american[randomNumber()])
             : input === mexican ? console.log("Your randomized recommendation for mexican is " + mexican[randomNumber()])
@@ -52,7 +52,8 @@ function choiceTernary(input){
                                 : input === italian ? console.log("Your randomized recommendation for italian is  " + italian[randomNumber()])
                                     : console.log("I'm sorry I did not understand your response please refresh the page and try again")
 }
-choice(prompt(`Input a choice based on the options of ${choicesArray}`).toLowerCase())
+choiceTernary(prompt(`Input a choice based on the options of ${choicesArray}`).toLowerCase())
+
 
 
 console.log(choice(american))
