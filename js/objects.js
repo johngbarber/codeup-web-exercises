@@ -16,6 +16,7 @@ const person = {
     lastName: "Barber",
     }
     console.log(person.firstName);
+     console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -26,9 +27,9 @@ const person = {
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello = function (){
-       console.log('Hello from' + ' ' + `${person.firstName}` + ' ' + `${person.lastName}`);
+       return 'Hello from' + ' ' + `${person.firstName}` + ' ' + `${person.lastName}`;
     }
-    person.sayHello()
+        console.log(person.sayHello());
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -43,17 +44,19 @@ const person = {
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
+    let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-let total;
+
+
+    //For each loop to log price 
    shoppers.forEach(shopper => {
        if (shopper.amount >= 200) {
-         console.log(`${shopper.name} ${shopper.amount * .88}`)
+         console.log(`${shopper.name} amount before discount $${shopper.amount.toFixed(2)}, earns a discount of $${(shopper.amount.toFixed(2) * .12).toFixed(2)} - amount after discount $${(shopper.amount * .88).toFixed(2)}`)
        } else if (shopper.amount < 200){
-           console.log(`${shopper.name} ${total = shopper.amount}`);
+           console.log(`${shopper.name} owes $${shopper.amount}`);
        }
     })
 
@@ -171,6 +174,16 @@ let total;
         createBook('Fairy Tale' , 'Stephen', 'King'),
         createBook('Pet Sematary', 'Stephen', 'King' ),
     ];
+   // look at the lasso-web-exercises for the function
+    function showBookInfo(book, bookNumb){
+        console.log("Book 3" + bookNumb);
+        console.log("Title:" + book.title);
+        console.log("Author:" + book.author.firstName + " " + book.author.lastName);
+        console.log("----")
+        }
 
+    for(let i = 0; i < books.length; i++){
+        showbookinfo()
+    }
     console.log(booksNew)
 })();
