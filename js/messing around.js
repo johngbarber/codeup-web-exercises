@@ -147,3 +147,26 @@ function printColorfulMultiplicationTable() {
 // Call the function to print the colorful multiplication table
 printColorfulMultiplicationTable();
 
+//for each loop
+
+const numbers=[1,2,3,4,5]
+
+numbers.forEach(num => console.log(`Here is a number ${num}`))
+
+for (let num of numbers){
+    console.log(`Here is a number ${num}`)
+}
+
+// get a date object that represents the current date/time
+let today = new Date();
+
+// create a date object based on a specific date/time
+// notice that month is zero based in non-string constructors
+let codeup = new Date("February 4, 2014 09:00:00");
+codeup = new Date("2014-02-04T09:00:00");
+codeup = new Date(2014, 1, 4);
+codeup = new Date(2014, 1, 4, 9, 0, 0);
+
+console.log(codeup)
+
+console.log(codeup.toLocaleDateString());

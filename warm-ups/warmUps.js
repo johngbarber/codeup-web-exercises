@@ -69,3 +69,13 @@ console.log('My Favorite Movies in Alphabetical Order');
 movies.forEach((movie => {
     console.log(movie)
 }))
+
+let cars = [
+    {make: "Dodge", model: "Challenger", shade: "blue"},
+    {make: "Ferrari", model: "La Ferrari", shade: "red"},
+    {make: "Acura", model: "NSX", shade: "black"}
+];
+
+for (let car of cars){
+    console.log(`Here is an awesome ${car.shade} ${car.make} ${car.model}.`)
+}
