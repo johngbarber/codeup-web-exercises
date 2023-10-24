@@ -59,7 +59,7 @@
 //
 // evenNumbers()
 
-// Create an array of at least five of your favorite movies movies. create a for each loop ( or a for od loop) to console log all of your movies in alphabetical order.
+// Create an array of at least five of your favorite movies. create a for each loop ( or a for od loop) to console log all of your movies in alphabetical order.
 
 const movies = ['Die Hard', 'Die Hard 2', 'Die Hard with a Vengeance', 'Live Free or Die Hard', 'A Good Day to Die Hard' ]
 // sort the array
