@@ -12,6 +12,8 @@
             </p>
             <p>
             The ideal web dev job that I am looking for would allow me to work remote, however I am open to working in an office at first. It would also allow me to leverage some of my previous education in biology and sociology or my experience working in the tech field. I am not sure what to expect as far as pay, but something in the 50 - 60 thousand dollar range would be nice to start off with. I am unsure whether I will be more comfortable with front or back end development yet, but an opportunity to work with both in order to hone the skills that I develop here would be ideal. If the employer was somehow involved with state or federal government I would like that, as I would like to be able to use my time in service in the Army towards my calculated retirement time with a new employer.
+
+            I will be employed within 2 months of graduation from codeup. Hopefully Leslie, Wayne's neighbor will still be in a position to hire me. My base salary will be 55 thousand dollars or higher. I will also be in the position to start my master's degree in instructional technology within the year utilizing Vocational Rehabilitation.
             </p>
     </body>
 </html>

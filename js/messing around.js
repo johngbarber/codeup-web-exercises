@@ -170,3 +170,12 @@ codeup = new Date(2014, 1, 4, 9, 0, 0);
 console.log(codeup)
 
 console.log(codeup.toLocaleDateString());
+
+//Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
+
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined;
+    }
+    return a > b? a : b;
+}
