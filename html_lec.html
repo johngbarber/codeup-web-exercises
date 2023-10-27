@@ -91,8 +91,59 @@
 
     <img src="https://images.pexels.com/photos/18847930/pexels-photo-18847930/free-photo-of-venice.jpeg" style="width:427px;height:640px;">
     <hr>
-    <h2>Tables</h2>
-        <h3>Tables are used to:</h3>
+    <h2>Forms</h2>
+    <p>
+        Forms are used to collect user input.
+    </p>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="username">
+        <br>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="password">
+        <br>
+
+        <input type="submit">
+    </form>
+    <hr>
+    <form action="https://request-inspector.glitch.me" method="GET">
+        <label for="zipcode">Zipcode</label>
+        <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode">
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    <input type="text" name="username" value="codeup" disabled>
+
+    <select name="newsletter_signup">
+        <option disabled value="n">No</option>
+        <option selected value="y">Yes</option>
+    </select>
+    <hr>
+    <select name="coffee_preference">
+        <option value="light">Light Roast</option>
+        <option value="dark">Dark Roast</option>
+        <option value="espresso">Espresso Blend</option>
+    </select>
+    <form>
+        <input name="the_answer" value="42">
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>What kind of phone do you own?</h2>
+    <label for="android">
+        Android <input id="android" type="checkbox" name="phones" value="android">
+    </label>
+    <label for="ios">
+        iOS <input id="ios" type="checkbox" name="phones" value="ios">
+    </label>
+    <label for="windows">
+        Windows <input id="windows" type="checkbox" name="phones" value="windows">
+    </label>
+    <label for="other">
+        Other <input id="other" type="checkbox" name="phones" value="other">
+    </label>
 </body>
 </html>
 

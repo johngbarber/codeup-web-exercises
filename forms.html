@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+  <h1>Register With Us</h1>
+    <form method="post" action="https://request-inspector.glitch.me">
+      <!--Create text fields for email and password with appropriate placeholder values.-->
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" placeholder="Email address">
+
+        <br>
+
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" placeholder="Password">
+
+        <br>
+
+<!--    Create a textarea named "bio". This is for the user to fill out a short description of themselves.-->
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio"></textarea>
+        <br>
+        <h4>How Did You Hear About Us?</h4>
+<!--        Create a "How did you hear about us" section that contains radio buttons. The values should be "billboard", "radio advertisement", "internet advertisement", and "other". Only one of the values should be allowed to be selected at a time.-->
+      Billboard<input type="radio" name="how_hear1" value="billboard"><br>
+      Radio Advertisement<input type="radio" name="how_hear2" value="radio"><br>
+      Internet Advertisement<input type="radio" name="how_hear3" value="internet"><br>
+      Other<input type="radio" name="how_hear4" value="other"><br>
+
+      <br>
+<!--      Create a dropdown that asks the user what web browser they are using.-->
+      <label for="browser">Browser</label>
+      <select id="browser" name="browser">
+        <option value="chrome">Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="safari">Safari</option>
+        <option value="edge">Edge</option>
+        <option value="other">Other</option>
+        </select><br>
+      <br>
+      <button type="submit">Submit the form</button>
+    </form>
+</body>
+</html>
