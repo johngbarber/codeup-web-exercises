@@ -1,8 +1,43 @@
 .fancy-header {
-    color: blue; /* single line comment */
+    color: purple; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+/*Add a style to change the color of the headers on your page and make them underlined.*/
+h2 {
+    color: purple;
     text-decoration: underline;
 }
+/*Add a style to change the background color of the page.*/
+body {
 
+}
+
+body {
+    background-color: aliceblue;
+    background-image: url("/image/pexels-josh-sorenson-378268.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Add a style to change the list-style to something other than the default bullet.*/
+
+ul {
+    list-style-type: square;
+    color: darkblue;
+}
+
+ol {
+    color: darkblue;
+}
+
+/*Add a style to change the table, table cells td and rows tr padding and font sizes.*/
+table, th, td {
+    border: 1px solid;
+    padding: 3px;
+}
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
 /* unvisited link (:link) */
 a:link {
     color:red;
