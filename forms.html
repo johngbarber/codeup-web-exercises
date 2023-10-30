@@ -12,11 +12,10 @@
         <input id="email" type="text" name="email" placeholder="Email address">
 
         <br>
-
-        <label for="password">Password</label>
-        <input id="password" type="text" name="password" placeholder="Password">
-
         <br>
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" placeholder="Password"><br>
+      <br>
 
 <!--    Create a textarea named "bio". This is for the user to fill out a short description of themselves.-->
         <label for="bio">Bio</label>
@@ -24,14 +23,14 @@
         <br>
         <h4>How Did You Hear About Us?</h4>
 <!--        Create a "How did you hear about us" section that contains radio buttons. The values should be "billboard", "radio advertisement", "internet advertisement", and "other". Only one of the values should be allowed to be selected at a time.-->
-      Billboard<input type="radio" name="how_hear1" value="billboard"><br>
-      Radio Advertisement<input type="radio" name="how_hear2" value="radio"><br>
-      Internet Advertisement<input type="radio" name="how_hear3" value="internet"><br>
-      Other<input type="radio" name="how_hear4" value="other"><br>
+      <input checked id="Billboard" type="radio" name="how_hear1" value="billboard">Billboard<br>
+      <input id="Radio" type="radio" name="how_hear2" value="radio">Radio Advertisement<br>
+      <input id="Internet" type="radio" name="how_hear3" value="internet">Internet Advertisement<br>
+      <input id="Other" type="radio" name="how_hear4" value="other">Other<br>
 
       <br>
 <!--      Create a dropdown that asks the user what web browser they are using.-->
-      <label for="browser">Browser</label>
+      <h2><label for="browser">What bowser are you using?</label></h2><br>
       <select id="browser" name="browser">
         <option value="chrome">Chrome</option>
         <option value="firefox">Firefox</option>
