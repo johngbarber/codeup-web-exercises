@@ -13,3 +13,32 @@ is
 a
 multiline
 comment*/
+
+#color {
+    color: #ff00ff;
+    /*color: rgb(255,000,255);*/
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    font-size: 5em;
+    background-color: springgreen;
+}
+
+/*html {*/
+/*    background-image: url("/image/server_stock_image.jpeg");*/
+/*    background-size: cover;*/
+/*    background-position: center;;*/
+/*}*/
+
+ol {
+    list-style-type: square;
+    text-decoration: blink;
+}
+
+#ulOne {
+    text-decoration: underline;
+    text-decoration-color: deeppink;
+    color: #0fb784;
+    font-size: 3em;
+}

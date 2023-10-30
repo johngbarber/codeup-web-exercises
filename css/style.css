@@ -40,7 +40,7 @@ table, th, td {
 /*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
 /* unvisited link (:link) */
 a:link {
-    color:red;
+    text-blink: white red;
 }
 
 /* visited link (:visited) */

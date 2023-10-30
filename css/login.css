@@ -61,8 +61,7 @@ fieldset {
     background-color: #0fb784;
     font-weight: bold;
     color: white;
-    border: 1px;
-    border-color: lightgrey;
+    border: 1px solid grey;
     padding: 8px;
 }
 
