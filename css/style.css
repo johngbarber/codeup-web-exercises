@@ -9,15 +9,17 @@ h2 {
     text-decoration: underline;
 }
 /*Add a style to change the background color of the page.*/
-body {
-
+html {
+    background-color: aliceblue;
 }
 
 body {
-    background-color: aliceblue;
+
     background-image: url("/image/pexels-josh-sorenson-378268.jpg");
     background-position: center;
     background-size: cover;
+}
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,6 +38,7 @@ ol {
 table, th, td {
     border: 1px solid;
     padding: 3px;
+    font-size: 2em;
 }
 /*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
 /* unvisited link (:link) */
