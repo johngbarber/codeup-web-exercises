@@ -33,3 +33,17 @@
     width: 66%;
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .one-third,
+    .one-half,
+    .one-fourth,
+    .one-sixth,
+    .one-eighth,
+    .two-thirds {
+        width: 100%;
+    }
+}
