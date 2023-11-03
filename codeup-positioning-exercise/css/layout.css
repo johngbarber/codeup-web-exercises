@@ -15,6 +15,42 @@
     align-items: center;
 }
 
+.dots1{
+    position: absolute;
+    top: 50%;
+    right: 90%;
+}
+
+.dots2{
+    position: absolute;
+    top: 1%;
+    right: 7.5%;
+}
+
+.footerBottom{
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+}
+
+.footerTop{
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+.wavy1{
+    position: absolute;
+    top: 28%;
+    left: 2%;
+}
+
+.wavy2{
+    position: absolute;
+    right: 2%;
+}
 /*
     The "container", sometimes referred to as a "section", is a container
     element (semantic when applicable) that vertically separates different
@@ -174,4 +210,11 @@
 }
 .gap-40 {
     gap: 40px;
+}
+
+.cancel-button{
+    position: relative;
+    top: -60px;
+    right: -250px;
+    border-color: lightgrey;
 }

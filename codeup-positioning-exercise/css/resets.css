@@ -16,4 +16,10 @@ img, svg {
 
 button {
     cursor: pointer;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    border-color: lightgrey;
 }
+
