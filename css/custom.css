@@ -3,7 +3,23 @@
     height: 346px;
     background-size: cover;
 }
- /*Make the search button text no wrap*/
+ /*Make the search button text no wrap - added custom class*/
  .btn-search {
      white-space: nowrap;
  }
+/*Test*/
+.card-header {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+/*make badges round*/
+.badge{
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    background-color: white;
+    color: black;
+}
