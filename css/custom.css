@@ -3,3 +3,7 @@
     height: 346px;
     background-size: cover;
 }
+ /*Make the search button text no wrap*/
+ .btn-search {
+     white-space: nowrap;
+ }
