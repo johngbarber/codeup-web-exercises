@@ -110,62 +110,123 @@
                 <div class="card-footer list-group-item list-group-item-secondary d-flex justify-content-end">
                     <button class="btn btn-primary ">Next Step ></button>
                 </div>
-<!--                <h5>Choose Size and Crust</h5>-->
 
-<!--                <p>Hand Tossed</p>-->
-<!--                <p>Garlic seasoned crust with a rich, buttery taste.</p>-->
-            </div>
-<!--        <div class="tab-content">-->
-<!--            <div class="tab-pane fade" id="tab2">-->
-<!--                <h5>Choose Cheese and Sauce</h5>-->
-<!--                <p>Cheese</p>-->
-<!--                <p>How Much?</p>-->
-<!--                <div class="container-fluid dropdown">-->
-<!--                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                        Select Option-->
-<!--                    </button>-->
-<!--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--                        <a class="dropdown-item" href="#">Light</a>-->
-<!--                        <a class="dropdown-item" href="#">Normal</a>-->
-<!--                        <a class="dropdown-item" href="#">Extra</a>-->
-<!--                        <a class="dropdown-item" href="#">Double</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <hr>-->
-<!--                <p>Sauce</p>-->
-<!--                <p>What Type?</p>-->
-<!--                <div class="container-fluid dropdown">-->
-<!--                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                        Select Option-->
-<!--                    </button>-->
-<!--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--                        <a class="dropdown-item" href="#">Tomato</a>-->
-<!--                        <a class="dropdown-item" href="#">Marinara</a>-->
-<!--                        <a class="dropdown-item" href="#">BBQ</a>-->
-<!--                        <a class="dropdown-item" href="#">Alfredo</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <hr>-->
-<!--                <p>How Much?</p>-->
-<!--                <div class="container-fluid dropdown">-->
-<!--                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                        Select Option-->
-<!--                    </button>-->
-<!--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-<!--                        <a class="dropdown-item" href="#">Light</a>-->
-<!--                        <a class="dropdown-item" href="#">Normal</a>-->
-<!--                        <a class="dropdown-item" href="#">Extra</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="tab-pane fade" id="tab3">-->
-<!--                <h5>Choose Toppings</h5>-->
-<!--                <p>This is the content for Tab 3.</p>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
+            <div class="card tab-pane fade" id="tab2">
+                <div class="card-header list-group-item active">Choose Cheese and Sauce</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <ul class="card my-2 list-group">
+                            <li class="list-group-item list-group-item-secondary">Cheese</li>
+                            <li class="list-group-item">
+                                How much?
+                            </li>
+                            <li class="list-group-item">
+                                <select class="form-select">
+                                    <option>Light</option>
+                                    <option selected>Normal</option>
+                                    <option>Extra</option>
+                                    <option>Double</option>
+                                </select>
+                            </li>
+                        </ul>
 
-<!--    pizza build out - tabbed nav-->
+                        <ul class="card mt-4 mb-2 list-group">
+                            <li class="list-group-item list-group-item-secondary">Sauce</li>
+                            <li class="list-group-item">
+                                What type?
+                            </li>
+                            <li class="list-group-item">
+                                <select class="form-select">
+                                    <option selected>Tomato</option>
+                                    <option>Marinara</option>
+                                    <option>BBQ</option>
+                                    <option>Alfredo</option>
+                                </select>
+                            </li>
+                            <li class="list-group-item">
+                                How much?
+                            </li>
+                            <li class="list-group-item">
+                                <select class="form-select">
+                                    <option>Light</option>
+                                    <option selected>Normal</option>
+                                    <option>Extra</option>
+                                </select>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+                <div class="card-footer list-group-item list-group-item-secondary d-flex justify-content-end">
+                    <button class="btn btn-primary me-1">< Previous Step</button>
+                    <button class="btn btn-primary">Next Step ></button>
+                </div>
+            </div>
+            <div class="card tab-pane fade" id="tab3">
+                <div class="card-header list-group-item active">Choose Toppings</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <ul class="my-2 list-group">
+                            <li class="list-group-item list-group-item-secondary">Meats</li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox" id="italian sausage">
+                                <label class="form-check-label" for="italian sausage">
+                                    Italian Sausage
+                                </label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox" id="Ground Beef">
+                                <label class="form-check-label" for="Ground Beef">
+                                    Ground Beef
+                                </label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox" id="Chicken">
+                                <label class="form-check-label" for="Chicken">
+                                    Chicken
+                                </label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox" id="canadian bacon">
+                                <label class="form-check-label" for="canadian bacon">
+                                    Canadian Bacon
+                                </label>
+                            </li>
+                        </ul>
+
+                        <ul class="mt-4 mb-2 list-group">
+                            <li class="list-group-item list-group-item-secondary">Veggies</li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox" id="Bell Peppers">
+                                <label class="form-check-label" for="Bell Peppers">
+                                    Bell Peppers
+                                </label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox"  id="Anchovies">
+                                <label class="form-check-label" for="Anchovies">
+                                    Mushrooms
+                                </label>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-check-input" type="checkbox"  id="Red Onion">
+                                <label class="form-check-label" for="Red Onion">
+                                    Red Onion
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <div class="card-footer list-group-item list-group-item-secondary d-flex justify-content-end">
+                    <button class="btn btn-primary">Checkout <i class="fas fa-shopping-cart"></i></button>
+                </div>
+
+            </div>
+        </div>
+
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
