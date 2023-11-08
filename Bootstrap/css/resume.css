@@ -1,0 +1,12 @@
+.section-divider{
+    border-top: 8px solid #769E48;
+    opacity: 100%;
+}
+
+@media screen and (max-width: 767px){
+    .whole-site{
+        border-left: 3px solid black;
+        margin-left: 10px;
+    }
+}
+
