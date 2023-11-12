@@ -1,0 +1,59 @@
+img.logo {
+    width: 55px;
+}
+
+.button, img {
+    width: 55px;
+}
+
+body {
+    background-color: #E6E6E6;
+}
+
+
+
+
+
+
+h1 {}
+
+.btn-circle.btn-xl {
+    width: 100px;
+    height: 100px;
+    padding: 10px 16px;
+    border-radius: 100%;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    border: 5px solid white;
+
+}
+
+.btn-circle.btn-sm {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 10px;
+
+}
+
+.images, img {
+    width: 100%;
+}
+
+.btn-danger {
+    background-color: #E6563B;
+}
+
+.btn-warning {
+    background-color: #EB9D3A;
+}
+
+.btn-success {
+    background-color: #7CB06C;
+}
+
+.btn-primary {
+    background-color: #00ABA9;
+}
