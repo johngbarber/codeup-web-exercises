@@ -11,118 +11,78 @@
     <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="css/codeup-design-css.css">
     <title>Hello, world!</title>
 </head>
 <body class="main-body">
 
-<!--<div class="container mt-5">-->
-    <h2 class="text-center">Centered Icons on Small Screens</h2>
-<!--Icons for Design, Develop, Support, and Host for small and x-small screens-->
-    <div class="container mt-5">
-
-
-        <div class="row d-flex d-sm-flex d-md-none">
-            <div class="col-3 col-sm-3 pt-4">
-                <span></span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                    <span class="icon-design text-right">Design</span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                    <span class="icon-develop text-center">Develop</span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                <span></span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                <span></span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                    <span class="icon-support text-right">Support</span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                    <span class="icon-host text-center">HOST</span>
-            </div>
-            <div class="col-3 col-sm-3 pt-4">
-                <span></span>
-                <i class="fa-duotone fa-circle-d" style="--fa-primary-color: #000000; --fa-secondary-color: #e16b09; --fa-secondary-opacity: 1;"></i>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid main-content">
+        <img src="images/logo.png" width="50" height="50">
+        <a class="navbar-brand d-none d-lg-block" href="#">codeup design</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">SERVICES</a>
+                <a class="nav-link" href="#">WORK</a>
+                <a class="nav-link" href="#">BLOG</a>
+                <a class="nav-link">CONTACT</a>
             </div>
         </div>
     </div>
-<hr style="width: 80%; margin-right: 10%; margin-left: 10%;">
-<!--<div class="circle-teal">-->
-<!--    <span>H</span>-->
-<!--</div>-->
-<div class="container mt-5">
-    <div class="row justify-center">
-        <!-- First container: 8 columns wide -->
-        <div class="col-md-8">
-            <div>
-                <!-- Nested container: 12 columns wide -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div>
-                                <p class="abel-text">Selected Work</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row space-between d-none d-md-flex d-lg-flex">
-                        <img src="images/apple-ipad.jpg" alt="" class="col-md-6 custom-border left-pic">
-                        <img src="images/macbook.jpg" alt="" class="col-md-6 custom-border">
-                    </div>
-                    <div class="row">
-<!--                        placeholder for feature project text under first pair of pictures-->
-                    </div>
-                    <div class="row space-between d-none d-md-flex d-lg-flex">
-                        <img src="images/man.jpg" alt="" class="col-md-6 custom-border left-pic">
-                        <img src="images/security.jpg" alt="" class="col-md-6 custom-border">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Second container: 4 columns wide -->
-        <div class="col-md-4 d-sm-none d-none d-md-block">
-            <div>
-                <!-- Nested container: 12 columns wide -->
-                <div class="container-flex">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="abel-text">
-                                <p>The Last</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</nav>
 </div>
-<!--<div class="icon-design">-->
-<!--    <span>Design</span>-->
-<!--</div>-->
 
-<!--<div class="icon-develop">-->
-<!--    <span>Develop</span>-->
-<!--</div>-->
+<header class="container-fluid" style="margin-top: 20px">
 
-<!--<div class="icon-support">-->
-<!--    <span>Support</span>-->
-<!--</div>-->
+    <h3 class="text-uppercase text-center main-body ">Visual Design & Web Development</h3>
+    <h5 class="text-uppercase text-center mt-4 mb-4">From Park City, Utah</h5>
 
-<!--<div class="icon-host">-->
-<!--    <span>HOST</span>-->
-<!--</div>-->
-<!-- Optional JavaScript; choose one of the two! -->
+    <div class="circles d-flex justify-content-center">
 
-<!-- Option 1: Bootstrap Bundle with Popper -->
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="circle red text-uppercase">
+                <h6>Design</h6>
+            </div>
+            <div class="circle yellow text-uppercase">
+                <h6>Develop</h6>
+            </div>
+            <div class="w-100 d-md-none"></div><!-- used to force line break in flex items for mobile -->
+            <div class="circle green text-uppercase">
+                <h6>Support</h6>
+            </div>
+            <div class="circle blue text-uppercase">
+                <h6>Host</h6>
+            </div>
+        </div>
+
+    </div>
+</header>
+</div>
+        <hr style="width: 80%; margin-right: 10%; margin-left: 10%;">
+
+<main>
+    <div class="container-flex">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <p class="text-uppercase sub-title" style="text-align: center; margin-top: 10px; margin-bottom: 75px">Selected Work</p>
+            </div>
+            <div class="d-none d-lg-block col-lg-4">
+                <p class="text-uppercase sub-title" style="text-align: center; margin-top: 10px; margin-bottom: 75px">The Last</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <img class="images" src="images/apple-ipad.jpg">
+            </div>
+        </div>
+    </div>
+</main>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
--->
 </body>
 </html>
