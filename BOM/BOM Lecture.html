@@ -9,14 +9,14 @@
 </head>
 <body>
 <script>
-    console.log(innerWidth)
-    console.log(innerHeight)
-    confirm("Would you like to end it all?")
-    alert("You will now be slated for deletion.")
-    prompt("Do you have any final words?")
-
-    let count = 0;
-    let max = 10;
+    // console.log(innerWidth)
+    // console.log(innerHeight)
+    // confirm("Would you like to end it all?")
+    // alert("You will now be slated for deletion.")
+    // prompt("Do you have any final words?")
+    //
+    // let count = 0;
+    // let max = 10;
     // let intervalID = 1000; // interval time in milliseconds
 
     // const intervalId = setInterval( () => {
@@ -39,16 +39,25 @@
     //         }
     //
     // }, 5000)
-    const delay = 5000; // delay time in milliseconds
-
-    // const timeoutId = setTimeout(() => alert('Here is a delayed hello!'), delay);
-
-    let timeoutID = setTimeout(function (){
-        alert("Here is a delayed hello")
-    }, delay)
-
-    clearTimeout(timeoutID)
+    // const delay = 5000; // delay time in milliseconds
+    //
+    // // const timeoutId = setTimeout(() => alert('Here is a delayed hello!'), delay);
+    //
+    // let timeoutID = setTimeout(function (){
+    //     alert("Here is a delayed hello")
+    // }, delay)
+    //
+    // clearTimeout(timeoutID)
 </script>
-
+<ul>
+    <li class="numbers">One</li>
+    <li class="numbers">Two</li>
+    <li class="numbers">Three</li>
+    <li class="numbers">Four</li>
+    <li class="numbers">Five</li>
+</ul>
+<script>
+    document.querySelectorAll(".numbers").forEach(number => console.log(number.innerHTML));
+</script>
 </body>
 </html>
