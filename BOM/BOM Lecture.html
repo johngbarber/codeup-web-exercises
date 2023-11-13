@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    console.log(innerWidth)
+    console.log(innerHeight)
+    confirm("Would you like to end it all?")
+    alert("You will now be slated for deletion.")
+    prompt("Do you have any final words?")
+
+    let count = 0;
+    let max = 10;
+    // let intervalID = 1000; // interval time in milliseconds
+
+    // const intervalId = setInterval( () => {
+    //     if (count >= max) {
+    //         clearInterval(intervalId);
+    //         console.log('All done');
+    //     } else {
+    //         count++;
+    //         console.log('Repeating this line ' + count);
+    //     }
+    // }, interval);
+
+    // const intervalID = setInterval(function (){
+    //     if (count >= max) {
+    //             clearInterval(intervalId);
+    //             console.log('All done');
+    //         } else {
+    //             count++;
+    //             console.log('Repeating this line ' + count);
+    //         }
+    //
+    // }, 5000)
+    const delay = 5000; // delay time in milliseconds
+
+    // const timeoutId = setTimeout(() => alert('Here is a delayed hello!'), delay);
+
+    let timeoutID = setTimeout(function (){
+        alert("Here is a delayed hello")
+    }, delay)
+
+    clearTimeout(timeoutID)
+</script>
+
+</body>
+</html>
