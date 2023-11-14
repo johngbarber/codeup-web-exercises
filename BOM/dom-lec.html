@@ -28,17 +28,17 @@
 </form>
 <script>
     // Getting elements by ID name
-    let header = document.getElementById("header");
-    console.log(header)
+    // let header = document.getElementById("header");
+    // console.log(header)
     // console.log(document.getElementById("html"))
 
     //Getting elements by Class name
-    let content = document.getElementsByClassName("content");
-    console.log(content[0]);
-    for(let i = 0;  i < content.length; i++){
-        console.log(content[i]);
-    }
-    console.log(typeof content)
+    // let content = document.getElementsByClassName("content");
+    // console.log(content[0]);
+    // for(let i = 0;  i < content.length; i++){
+    //     console.log(content[i]);
+    // }
+    // console.log(typeof content)
 
     //Get element by tag name
     // let tagElements = document.getElementsByTagName("p");
@@ -82,14 +82,14 @@
     //     console.log(paragraphs[i].getAttribute("data-id1"));
     // }
 
-    //Modify style using DOM
-    // let pTags = document.getElementsByClassName("content");
-    // for(let i = 0; i < pTags.length; i++){
-    //     console.log(pTags[i].getAttribute("data-id1"));
-    //     pTags[i].style.color = "blue";
-    //     pTags[i].style.background = "grey";
-    //     pTags[i].style["background"] = "pink";
-    // }
+    // Modify style using DOM
+    let pTags = document.getElementsByClassName("content");
+    for(let i = 0; i < pTags.length; i++){
+        console.log(pTags[i].getAttribute("data-id1"));
+        pTags[i].style.color = "blue";
+        pTags[i].style.background = "grey";
+        // pTags[i].style["background"] = "pink";
+    }
 
     //querySelectors
     // let tagSelector = document.querySelector("html");
