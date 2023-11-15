@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script>
+  "use strict";
+  let audio = new Audio('audio/contraTitle.mp3')
+
+  let konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+  let user = [];
+  let counter = 0;
+
+  document.addEventListener('keyup', function(event) {
+    console.log(event.keyCode);
+    user.push(event.keyCode);
+
+    if (konami[counter] !== user[counter]) {
+      alert("Not correct Konami code!");
+      user = []; // Reset user input on incorrect key
+      counter = 0; // Reset the counter
+    } else if (konami.length - 1 === counter) {
+      alert("Correct Konami code - you get 30 lives!");
+      cheatsActivated();
+      user = []; // Reset user input on correct code
+      counter = 0; // Reset the counter
+    } else {
+      counter++;
+    }
+  });
+  function cheatsActivated(){
+    document.body.style.backgroundImage = "url(https://www.zikoko.com/wp-content/uploads/cloudinary/v1492601657/contra_zp0d09.jpg)";
+    audio.play();
+  }
+
+</script>
+</body>
+</html>

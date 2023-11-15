@@ -32,47 +32,108 @@
 
 <script>
     "use strict";
-    document.querySelector("#btn1").addEventListener("click",function (){
-    // TODO: Uncomment next line and get the main header element by id
-    const mainHeader = document.getElementById("main-header");
 
-    // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-    mainHeader.innerHTML= "JavaScript is Cool"
-    });
+    // declare variable with NodeList of all 'li' elements
+    let listItems = document.querySelectorAll('li');
+    // create loop to iterate over the NodeList and access the functions for mouseover and mouseout
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener('mouseover', handleMouseOver);
+        listItems[i].addEventListener('mouseout', handleMouseOut);
+    }
+    // mouseover function to change text to red
+    function handleMouseOver() {
+        this.style.color = 'red'; // Change text color to red on mouseover
+    }
+    // moustout function to change the text back to black
+    function handleMouseOut() {
+        this.style.color = 'black'; // Reset text color to black on mouseout
+    }
+//change text size
+    const subParagraphs = document.getElementsByClassName('sub-paragraph');
 
-    document.querySelector("#btn2").addEventListener("click", function(){
-    // TODO: Uncomment the next line and get the sub header element by id
-    const subHeader = document.getElementById("sub-header");
+    for (let i = 0; i < subParagraphs.length; i++) {
+        subParagraphs[i].addEventListener('dblclick', handleDoubleClick);
+    }
 
-    // TODO: Set the text color of subHeader to blue
-    subHeader.style.color= "blue";
-    })
+    function handleDoubleClick() {
+        this.style.fontSize = '32px';
+    }
 
-    document.querySelector("#btn3").addEventListener("click", function() {
-        // TODO: Uncomment the next line and get all list items
-        const listItems = document.getElementsByTagName('li');
+    // document.getElementById('main-header').addEventListener('click', function() {
+    //     this.style.backgroundColor = getRandomColor();
+    // });
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
-        for (let i = 0; i < listItems.length; i++) {
-            const dbId = listItems[i].getAttribute("data-dbid");
-            if (dbId == 1) {
-                listItems[i].style.color = "blue";
-                continue;
-            }
-            if (i % 2 === 0) {
-                listItems[i].style.color = "grey";
-            }
-        }
-    });
 
-    document.querySelector("#btn4").addEventListener("click", function() {
-    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-    const subParagraphs = document.getElementsByClassName("sub-paragraph");
 
-    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-    subParagraphs[0].innerHTML="Mission Accomplished!";
-    });
+    //this does not work due to addeventlistener not working on getelementsbyclassname
+    // document.getElementsByClassName('sub-paragraph').addEventListener('dblclick', function() {
+    //     this.style.fontSize = '32px';
+    // });
+
+
+
+    // // Add double-click event listener to all paragraphs
+    // const paragraphs = document.querySelectorAll('p');
+    // paragraphs.forEach(function(paragraph) {
+    //     paragraph.addEventListener('dblclick', handleDoubleClick);
+    // });
+
+
+    // change paragraph text size
+
+
+    // random color function
+    // function getRandomColor() {
+    //     const letters = '0123456789ABCDEF';
+    //     let color = '#';
+    //     for (let i = 0; i < 6; i++) {
+    //         color += letters[Math.floor(Math.random() * 16)];
+    //     }
+    //     return color;
+    // }
+    // document.querySelector("#btn1").addEventListener("click",function (){
+    // // TODO: Uncomment next line and get the main header element by id
+    // const mainHeader = document.getElementById("main-header");
+    //
+    // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+    // mainHeader.innerHTML= "JavaScript is Cool";
+    // // });
+    //
+    // // document.querySelector("#btn2").addEventListener("click", function(){
+    // // TODO: Uncomment the next line and get the sub header element by id
+    // const subHeader = document.getElementById("sub-header");
+    //
+    // // TODO: Set the text color of subHeader to blue
+    // subHeader.style.color= "blue";
+    // // })
+    //
+    // document.querySelector("#btn3").addEventListener("click", function() {
+    //     // TODO: Uncomment the next line and get all list items
+    //     const listItems = document.getElementsByTagName('li');
+    //
+    //     // TODO: Set text color on every other list item to grey
+    //     // TODO: Set text color of li with dbid = 1 to blue
+    //     for (let i = 0; i < listItems.length; i++) {
+    //         const dbId = listItems[i].getAttribute("data-dbid");
+    //         if (dbId == 1) {
+    //             listItems[i].style.color = "blue";
+    //             continue;
+    //         }
+    //         if (i % 2 === 0) {
+    //             listItems[i].style.color = "grey";
+    //         }
+    //     }
+    // });
+
+    // // document.querySelector("#btn4").addEventListener("click", function() {
+    // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+    // const subParagraphs = document.getElementsByClassName("sub-paragraph");
+    //
+    // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    // subParagraphs[0].innerHTML="Mission Accomplished!";
+    // // });
+
+
 </script>
 </body>
 </html>
