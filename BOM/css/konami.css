@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#background-wrapper {
+    transition: background-position 4s linear;
+    background-image: url('https://www.zikoko.com/wp-content/uploads/cloudinary/v1492601657/contra_zp0d09.jpg');
+    background-size: cover;
+    background-position: -100% 0; /* Initial position: completely off-screen to the left */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.slide-background {
+    background-position: 100% 0; /* Final position: completely on-screen */
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 50vh; /* Adjusted to center the h1 vertically */
+}

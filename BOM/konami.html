@@ -2,6 +2,21 @@
 <html>
 <head>
   <title>Konami Code</title>
+  <style>
+    body {
+      transition: background-position 4s linear;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .slide-background {
+      background-image: url(https://www.zikoko.com/wp-content/uploads/cloudinary/v1492601657/contra_zp0d09.jpg);
+      background-size: cover;
+      background-position: -100% 0; /* Initial position: completely off-screen to the left */
+    }
+
+
+  </style>
 </head>
 <body>
 <h1>Konami Code</h1>
@@ -20,22 +35,28 @@
 
     if (konami[counter] !== user[counter]) {
       alert("Not correct Konami code!");
-      user = []; // Reset user input on incorrect key
-      counter = 0; // Reset the counter
+      resetState();
     } else if (konami.length - 1 === counter) {
       alert("Correct Konami code - you get 30 lives!");
       cheatsActivated();
-      user = []; // Reset user input on correct code
-      counter = 0; // Reset the counter
+      resetState();
     } else {
       counter++;
     }
   });
-  function cheatsActivated(){
-    document.body.style.backgroundImage = "url(https://www.zikoko.com/wp-content/uploads/cloudinary/v1492601657/contra_zp0d09.jpg)";
+
+  function cheatsActivated() {
+    document.body.classList.add('slide-background');
     audio.play();
   }
 
+  function resetState() {
+    user = [];
+    counter = 0;
+  }
 </script>
 </body>
 </html>
+
+
+
