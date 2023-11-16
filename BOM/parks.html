@@ -148,6 +148,42 @@
             li.parentElement.firstElementChild.style.color = "blue"
         })
     })
+
+    function swapLeft(){
+        const leftFrame = document.getElementById("left-frame");
+        const centerFrame = document.getElementById("center-frame");
+
+        const leftImage = leftFrame.querySelector(".picture").src;
+        const centerImage = centerFrame.querySelector(".picture").src;
+
+        leftFrame.querySelector(".picture").src = centerImage;
+        centerFrame.querySelector(".picture").src = leftImage;
+    }
+
+    function swapRight() {
+        const rightFrame = document.getElementById("right-frame");
+        const centerFrame = document.getElementById("center-frame");
+
+        const rightImage = rightFrame.querySelector(".picture").src;
+        const centerImage = centerFrame.querySelector(".picture").src;
+
+        rightFrame.querySelector(".picture").src = centerImage;
+        centerFrame.querySelector(".picture").src = rightImage;
+    }
+
+    function swapCenter() {
+        const centerFrame = document.getElementById('center-frame');
+        const frames = document.querySelectorAll('.frame:not(#center-frame)');
+
+        const randomIndex = Math.floor(Math.random() * frames.length);
+        const randomFrame = frames[randomIndex];
+
+        const centerImage = centerFrame.querySelector('.picture').src;
+        const randomImage = randomFrame.querySelector('.picture').src;
+
+        centerFrame.querySelector('.picture').src = randomImage;
+        randomFrame.querySelector('.picture').src = centerImage;
+    }
 </script>
 </div>
 </body>
