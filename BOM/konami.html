@@ -3,7 +3,7 @@
 <head>
   <title>Konami Code</title>
   <style>
-    body {
+    .transition {
       transition: background-position 4s linear;
       margin: 0;
       overflow: hidden;
@@ -18,7 +18,7 @@
 
   </style>
 </head>
-<body>
+<body class="transition">
 <h1>Konami Code</h1>
 
 <script>
@@ -30,7 +30,7 @@
   let counter = 0;
 
   document.addEventListener('keyup', function(event) {
-    console.log(event.keyCode);
+    console.log(event.code);
     user.push(event.keyCode);
 
     if (konami[counter] !== user[counter]) {
