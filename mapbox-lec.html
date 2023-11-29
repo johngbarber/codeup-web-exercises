@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #map {
+        width: 50%;
+        height: 500px;
+        margin: 20px auto;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Mapbox Exercises</h1>
+</header>
+
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<!-- Custom JS -->
+<script>
+    // mapboxgl.accessToken = MAPBOX_API;
+    // const map = new mapboxgl.Map({
+    //     container: 'map', // container ID
+    //     style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+    //     zoom: 10, // starting zoom
+    //     center: [-98.4916, 29.4252] // [lng, lat]
+    // });
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.4916, 29.4260])
+    //     .addTo(map);
+    //setting a popup object
+    // let popup = new mapboxgl.Popup()
+    //     .setLngLat([-98.489615, 29.426827])
+    //     .setHTML("<p>Codeup Rocks!</p>")
+    //     .addTo(map);
+    // const codeupPopup = new mapboxgl.Popup()
+    //     .setHTML("<p>Welcome to San Antonio!</p>");
+    //
+    // marker.setPopup(codeupPopup);
+
+    // geocode("900 Jackson St UNIT 410, Dallas, TX 75202", MAPBOX_API).then( result => {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(20);
+    // });
+    //
+    // reverseGeocode({lng: -98.4816, lat:29.4260}, MAPBOX_API).then( result => {
+    //     console.log(result);
+    // })
+    const ACCESS_TOKEN = MAPBOX_API;
+
+    mapboxgl.accessToken = ACCESS_TOKEN;
+
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    const alamoInfo = {
+        address: "The Alamo, San Antonio",
+        popupHTML: "<p>Welcome to the Alamo!</p>"
+    };
+
+    function placeMarkerAndPopup(info, token, map) {
+        geocode(info.address, token).then( coords => {
+            let popup = new mapboxgl.Popup()
+                .setHTML(info.popupHTML);
+            let marker = new mapboxgl.Marker()
+                .setLngLat(coords)
+                .addTo(map)
+                .setPopup(popup);
+            popup.addTo(map);
+        });
+    }
+
+    placeMarkerAndPopup(alamoInfo, ACCESS_TOKEN, map);
+</script>
+</body>
+</html>

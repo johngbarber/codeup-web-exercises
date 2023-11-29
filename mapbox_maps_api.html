@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API Exercise</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #map {
+            width: 50%;
+            height: 500px;
+            margin: 20px auto;
+        }
+        .popup{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Mapbox Exercises</h1>
+</header>
+
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = MAPBOX_API;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+        zoom: 10, // starting zoom
+        center: [-96.4719, 32.7482] // [lng, lat]
+    });
+
+    const restaurants = [
+        {
+            name: "French Quarter Bistro",
+            longitude: -96.44972,
+            latitude: 32.74119,
+            website: "https://www.fqbistro.com/"
+
+        },
+        {
+            name: "The Burger Shop",
+            longitude: -96.4572,
+            latitude: 32.7655,
+            website: "https://www.theburgershoptx.com/"
+        },
+        {
+            name: "Pablo's Restaurant and Cantina",
+            longitude: -96.4770,
+            latitude: 32.8346,
+            website: "https://pablostx.com/"
+        }
+    ]
+
+        restaurants.forEach((restaurant, index)=> {
+            if (index === restaurants.length -1){
+                map.setCenter([restaurant.longitude, restaurant.latitude]);
+                map.setZoom(10);
+            }
+            const marker = new mapboxgl.Marker()
+                .setLngLat([restaurant.longitude, restaurant.latitude])
+                .addTo(map);
+            const popup = new mapboxgl.Popup()
+                // .setLngLat = ([restaurant.longitude, restaurant.latitude])
+                .setHTML(`<a href=${restaurant.website} target="_blank">${restaurant.name}</a>`);
+            marker.setPopup(popup);
+    })
+
+
+</script>
+</body>
+</html>
