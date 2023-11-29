@@ -58,3 +58,32 @@ for (let i = 1; i <= 100; i++){
         console.log(i)
     }
 }
+
+function displayToDoList() {
+    // Fetch the JSON file
+    fetch('to-do.json')
+        .then(response => response.json())
+        .then(data => {
+            // Get the container where we'll append the checkboxes
+            const todoContainer = document.getElementById('todo-container');
+
+            // Iterate through the to-do list items and create checkboxes
+            data.forEach(item => {
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = item.id; // You can use a unique identifier for the ID
+                const label = document.createElement('label');
+                label.htmlFor = item.id;
+                label.appendChild(document.createTextNode(item.task));
+
+                // Append the checkbox and label to the container
+                todoContainer.appendChild(checkbox);
+                todoContainer.appendChild(label);
+                todoContainer.appendChild(document.createElement('br'));
+            });
+        })
+        .catch(error => console.error('Error fetching to-do list:', error));
+}
+
+// Call the function to display the to-do list
+displayToDoList();

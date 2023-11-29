@@ -60,22 +60,50 @@
 // evenNumbers()
 
 // Create an array of at least five of your favorite movies. create a for each loop ( or a for od loop) to console log all of your movies in alphabetical order.
+//
+// const movies = ['Die Hard', 'Die Hard 2', 'Die Hard with a Vengeance', 'Live Free or Die Hard', 'A Good Day to Die Hard' ]
+// // sort the array
+// movies.sort();
+// //console log the array using a for each loop
+// console.log('My Favorite Movies in Alphabetical Order');
+// movies.forEach((movie => {
+//     console.log(movie)
+// }))
+//
+// let cars = [
+//     {make: "Dodge", model: "Challenger", shade: "blue"},
+//     {make: "Ferrari", model: "La Ferrari", shade: "red"},
+//     {make: "Acura", model: "NSX", shade: "black"}
+// ];
+//
+// for (let car of cars){
+//     console.log(`Here is an awesome ${car.shade} ${car.make} ${car.model}.`)
+// }
+function displayToDoList() {
+    // Fetch the JSON file
+    fetch('data/to-do.json')
+        .then(response => response.json())
+        .then(data => {
+            // Get the container where we'll append the checkboxes
+            const todoContainer = document.getElementById('todo-container');
 
-const movies = ['Die Hard', 'Die Hard 2', 'Die Hard with a Vengeance', 'Live Free or Die Hard', 'A Good Day to Die Hard' ]
-// sort the array
-movies.sort();
-//console log the array using a for each loop
-console.log('My Favorite Movies in Alphabetical Order');
-movies.forEach((movie => {
-    console.log(movie)
-}))
+            // Iterate through the to-do list items and create checkboxes
+            data.forEach(item => {
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = item.id;
+                const label = document.createElement('label');
+                label.htmlFor = item.id;
+                label.appendChild(document.createTextNode(item.id));
 
-let cars = [
-    {make: "Dodge", model: "Challenger", shade: "blue"},
-    {make: "Ferrari", model: "La Ferrari", shade: "red"},
-    {make: "Acura", model: "NSX", shade: "black"}
-];
-
-for (let car of cars){
-    console.log(`Here is an awesome ${car.shade} ${car.make} ${car.model}.`)
+                // Append the checkbox and label to the container
+                todoContainer.appendChild(checkbox);
+                todoContainer.appendChild(label);
+                todoContainer.appendChild(document.createElement('br'));
+            });
+        })
+        // .catch(error => console.error('Error fetching to-do list:', error));
 }
+
+// Call the function to display the to-do list
+displayToDoList();
