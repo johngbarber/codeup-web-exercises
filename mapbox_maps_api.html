@@ -74,7 +74,6 @@
                 .setLngLat([restaurant.longitude, restaurant.latitude])
                 .addTo(map);
             const popup = new mapboxgl.Popup()
-                // .setLngLat = ([restaurant.longitude, restaurant.latitude])
                 .setHTML(`<a href=${restaurant.website} target="_blank">${restaurant.name}</a>`);
             marker.setPopup(popup);
     })
