@@ -1,0 +1,319 @@
+@import "reset.css";
+/* Styles */
+
+/* Base */
+#saveButton {
+    width: 100%;
+}
+#name-coffee {
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #e6d5b8;
+    padding-left: 10px;
+}
+
+body {
+    padding: 0 50px;
+    background-color: #e6d5b8;
+}
+
+.page-wrapper {
+    min-height: 100dvh;
+}
+
+.container {
+    background-image: url("");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: unset;
+}
+
+button {
+    background-color: transparent;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/*items active */
+.display {
+    display: flex;
+    flex-direction: row;
+}
+.default {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: #f4f3ee;
+    display: flex;
+}
+
+.selected {
+    border: 3px solid #755139;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the right */
+}
+
+.search-bar input {
+    margin-right: 10px; /* Add some space between input and button */
+}
+
+/* Nav style */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+
+    & h1 {
+        margin: unset;
+    }
+    & ul {
+        margin: unset;
+    }
+}
+
+.tab {
+    padding: 0;
+}
+.tab-content {
+    max-height: 100%;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Accordion style */
+.accordion-wrapper {
+    & div {
+        background-color: transparent;
+        align-items: center;
+        gap: 12px;
+    }
+    & img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.icon-btn {
+    cursor: pointer;
+}
+
+.accordion {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.accordion li {
+    padding: 10px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.accordion-content {
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion-content li {
+    display: flex;
+}
+
+.accordion-content.display {
+    max-height: 500px; /* Set an appropriate value for max-height */
+}
+
+.hide-button {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.light-roast {
+    background-image: url("../assets/img/coffee-light.png");
+}
+
+.roast-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 8px;
+    color: white;
+    border-radius: 10px;
+}
+
+.roast-label:hover {
+    cursor: pointer;
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+
+.roast-label:nth-of-type(1) {
+    background-image: url("/assets/img/coffee-light.png");
+}
+.roast-label:nth-of-type(2) {
+    background-image: url("/assets/img/coffee-medium.png");
+}
+.roast-label:nth-of-type(3) {
+    background-image: url("/assets/img/coffee-dark.png");
+}
+.milk-label {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.milk-label:hover {
+    cursor: pointer;
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+
+.flavor-label {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 8px;
+    background-color: white;
+    color: white;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.flavor-label:hover {
+    cursor: pointer;
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+.flavor-label:nth-of-type(1) {
+    background-image: url("/assets/img/sugar.jpg");
+}
+.flavor-label:nth-of-type(2) {
+    background-image: url("/assets/img/hazelnut.jpg");
+}
+.flavor-label:nth-of-type(3) {
+    background-image: url("/assets/img/vanilla.jpg");
+}
+.flavor-label:nth-of-type(4) {
+    background-image: url("/assets/img/coconut.jpg");
+}
+.flavor-label:nth-of-type(5) {
+    background-image: url("/assets/img/caramel.png");
+}
+
+.size-label {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.size-label:hover {
+    cursor: pointer;
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+
+input[type="radio"]:checked + .roast-label {
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+input[type="radio"]:checked + .flavor-label {
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+input[type="radio"]:checked + .milk-label {
+    border: 3px solid #daa19a;
+    border-radius: 10px;
+}
+input[type="radio"]:checked + .size-label {
+    border: 3px solid #daa19a;
+    border-radius: 12px;
+}
+
+.lt-menu {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.card {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    color: white;
+}
+.card-body {
+    height: 100px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+select {
+    height: 30px;
+}
+input[type="search"] {
+    height: 30px;
+}

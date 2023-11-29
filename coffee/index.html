@@ -1,34 +1,428 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-<h1>Coffee!</h1>
+<header>
+  <nav class="d-flex align-items-center">
+    <h1>Coffee shop</h1>
+    <ul>
+      <li><a href="/"> Home </a></li>
+      <li><a href="/"> Menu </a></li>
+      <li><a href="/">Contact</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
+      <button type="button">Search</button>
+    </div>
+  </nav>
+</header>
+<div class="page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="tab menu d-flex">
+        <button class="tablink" data-tab="show-coffee">
+          Full menu
+        </button>
+        <button
+                class="tablink default"
+                data-tab="create-coffee"
+        >
+          Create your own
+        </button>
+      </div>
+      <div class="tab-content" data-content="create-coffee">
+        <div class="col lt-menu">
+          <!-- start Accordion -->
+          <form
+                  class="accordion-wrapper d-flex flex-column"
+                  name="options"
+                  data-select="selection"
+          >
+            <!-- start Roast Section -->
+            <div class="accordion roast">
+              <div class="hide-button">
+                <div
+                        class="icon-btn d-flex align-items-center justify-content-between"
+                        data-icon="accordion-roast"
+                >
+                  <h2>Roast</h2>
+                  <img
+                          src="./assets/img/mi_remove.svg"
+                          class="remove-btn"
+                  />
+                  <img
+                          src="./assets/img/mi_add.svg"
+                          class="add-btn"
+                  />
+                </div>
+              </div>
+              <ul
+                      data-list="accordion-roast"
+                      class="accordion-content default"
+              >
+                <li>
+                  <input
+                          type="radio"
+                          name="roastType"
+                          value="light"
+                          class="radio-option"
+                          id="light"
+                  />
+                  <label
+                          class="roast-label"
+                          for="light"
+                  >Light
+                  </label>
+                  <input
+                          type="radio"
+                          name="roastType"
+                          value="medium"
+                          class="radio-option"
+                          id="medium"
+                  />
+                  <label
+                          for="medium"
+                          class="roast-label"
+                  >Medium</label
+                  >
 
-<form>
-  <label for="roast-selection"></label>
-  <select id="roast-selection">
-    <option>light</option>
-    <option>medium</option>
-    <option>dark</option>
-  </select>
-  <input id="submit" type="submit" />
-</form>
+                  <input
+                          type="radio"
+                          name="roastType"
+                          value="dark"
+                          class="radio-option"
+                          id="dark"
+                  />
+                  <label
+                          for="dark"
+                          class="roast-label"
+                  >
+                    Dark</label
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end Roast section -->
+            <!-- start Milk section -->
+            <div class="accordion milk">
+              <div class="hide-button">
+                <div
+                        class="icon-btn d-flex align-items-center justify-content-between"
+                        data-icon="accordion-milk"
+                >
+                  <h2>Milk</h2>
+                  <img
+                          src="./assets/img/mi_remove.svg"
+                          class="remove-btn"
+                  />
+                  <img
+                          src="./assets/img/mi_add.svg"
+                          class="add-btn"
+                  />
+                </div>
+              </div>
+              <ul
+                      data-list="accordion-milk"
+                      class="accordion-content default"
+              >
+                <li>
+                  <input
+                          type="radio"
+                          name="milk"
+                          value="whole"
+                          class="radio-option"
+                          id="whole"
+                  />
+                  <label
+                          class="milk-label"
+                          for="whole"
+                  >whole
+                  </label>
+                  <input
+                          type="radio"
+                          name="milk"
+                          value="2%"
+                          class="radio-option"
+                          id="twopercent"
+                  />
+                  <label
+                          class="milk-label"
+                          for="twopercent"
+                  >2%
+                  </label>
 
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>NAME</th>
-    <th>ROAST</th>
-  </tr>
-  </thead>
-  <tbody id="coffees"></tbody>
-</table>
+                  <input
+                          type="radio"
+                          name="milk"
+                          value="skim"
+                          class="radio-option"
+                          id="skim"
+                  />
+                  <label class="milk-label" for="skim"
+                  >Skim</label
+                  >
 
-<script src="main.js"></script>
+                  <input
+                          type="radio"
+                          name="milk"
+                          value="almond"
+                          class="radio-option"
+                          id="almond"
+                  />
+                  <label
+                          class="milk-label"
+                          for="almond"
+                  >Almond Milk
+                  </label>
+
+                  <input
+                          type="radio"
+                          name="milk"
+                          value="oat"
+                          class="radio-option"
+                          id="oat"
+                  />
+                  <label class="milk-label" for="oat"
+                  >Oat Milk</label
+                  >
+
+                  <input
+                          type="radio"
+                          name="milk"
+                          value="coconutmilk"
+                          class="radio-option"
+                          id="coconut"
+                  />
+                  <label
+                          class="milk-label"
+                          for="coconut"
+                  >Coconut Milk</label
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end Milk section -->
+            <!-- start flavor section -->
+            <div class="accordion flavor">
+              <div class="hide-button">
+                <div
+                        class="icon-btn d-flex align-items-center justify-content-between"
+                        data-icon="accordion-sweetener"
+                >
+                  <h2>Flavor</h2>
+                  <img
+                          src="./assets/img/mi_remove.svg"
+                          class="remove-btn"
+                  />
+                  <img
+                          src="./assets/img/mi_add.svg"
+                          class="add-btn"
+                  />
+                </div>
+              </div>
+              <ul
+                      data-list="accordion-flavor"
+                      class="accordion-content default"
+              >
+                <li>
+                  <input
+                          type="radio"
+                          name="flavor"
+                          value="sugar"
+                          class="radio-option"
+                          id="sugar"
+                  />
+                  <label
+                          class="flavor-label"
+                          for="sugar"
+                  >Sugar</label
+                  >
+                  <input
+                          type="radio"
+                          name="flavor"
+                          value="hazelnut"
+                          class="radio-option"
+                          id="hazelnut"
+                  />
+                  <label
+                          class="flavor-label"
+                          for="hazelnut"
+                  >Hazelnut</label
+                  >
+                  <input
+                          type="radio"
+                          name="flavor"
+                          value="vanilla"
+                          class="radio-option"
+                          id="vanilla"
+                  />
+                  <label
+                          class="flavor-label"
+                          for="vanilla"
+                  >Vanilla</label
+                  >
+                  <input
+                          type="radio"
+                          name="flavor"
+                          value="coconut"
+                          class="radio-option"
+                          id="coconut-milk"
+                  />
+                  <label
+                          class="flavor-label"
+                          for="coconut-milk"
+                  >Coconut</label
+                  >
+                  <input
+                          type="radio"
+                          name="flavor"
+                          value="caramel"
+                          class="radio-option"
+                          id="caramel"
+                  />
+                  <label
+                          class="flavor-label"
+                          for="caramel"
+                  >Carmel</label
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end flavor section -->
+            <!-- start size section -->
+            <div class="accordion size">
+              <div class="hide-button">
+                <div
+                        class="icon-btn d-flex align-items-center justify-content-between"
+                        data-icon="accordion-size"
+                >
+                  <h2>Size</h2>
+                  <img
+                          src="./assets/img/mi_remove.svg"
+                          class="remove-btn"
+                  />
+                  <img
+                          src="/assets/img/mi_add.svg"
+                          class="add-btn"
+                  />
+                </div>
+              </div>
+              <ul
+                      data-list="accordion-size"
+                      class="accordion-content default"
+              >
+                <li>
+                  <input
+                          type="radio"
+                          name="size"
+                          value="small"
+                          class="radio-option"
+                          id="small"
+                  />
+                  <label
+                          class="size-label"
+                          for="small"
+                  >Small 8oz</label
+                  >
+                  <input
+                          type="radio"
+                          name="size"
+                          value="medium"
+                          class="radio-option"
+                          id="med"
+                  />
+                  <label class="size-label" for="med"
+                  >Medium 12oz</label
+                  >
+                  <input
+                          type="radio"
+                          name="size"
+                          value="large"
+                          class="radio-option"
+                          id="large"
+                  />
+                  <label
+                          class="size-label"
+                          for="large"
+                  >Large 16oz</label
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- end size section -->
+            <div
+                    class="d-flex flex-column justify-conetent-start align-items-start"
+            >
+              <label for="name-coffee" class="coffee-name"
+              >Name your coffee
+              </label>
+              <input
+                      type="text"
+                      id="name-coffee"
+                      name="name"
+              />
+              <button id="saveButton">submit</button>
+            </div>
+          </form>
+          <!-- end Accordion -->
+          <!-- create coffee -->
+        </div>
+        <div class="col rt-menu">
+          <!-- display selections -->
+          <div class="display-selection-wrapper">
+            <div>
+              <h2>Your Selections:</h2>
+              <ul>
+                <!-- list will render upon selection of coffee items -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" data-content="show-coffee">
+        <!-- Beginning of coffee cards -->
+        <div
+                class="menu-wrapper d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="menu-header">
+            <div class="search-bar-wrapper d-flex gap-4">
+              <label for="menu">
+                Choose roast type:
+              </label>
+              <select name="inventory" id="menu">
+                <option value="all">All</option>
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+              </select>
+              <form class="d-flex">
+                <input
+                        type="search"
+                        class="form-control"
+                        id="search"
+                        placeholder="Search..."
+                />
+                <button type="button">Search</button>
+              </form>
+            </div>
+          </div>
+          <div
+                  class="row g-4 justify-content-center align-items-center"
+          >
+            <div class="card-container d-flex"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/index.js"></script>
+<script src="js/tabs.js"></script>
 </body>
 </html>
