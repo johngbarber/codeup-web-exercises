@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Map</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
 
     <style>
@@ -26,7 +27,7 @@
     <button type="submit" id="citySubmit" class="btn btn-primary">Search</button>
 </form>
 
-<div id="weatherOutput"></div>
+<div class="row" id="weatherOutput"></div>
 
 <div id="map"></div>
 
@@ -34,6 +35,17 @@
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
 <script src="js/weather_map.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<!--<div class="card col-md-2" style="width: 18rem;">-->
+<!--    <img src="..." class="card-img-top" alt="...">-->
+<!--    <div class="card-body">-->
+<!--        <p>${Description}</p>-->
+<!--        <p>${Temp}</p>-->
+<!--        <p>${Humidity}</p>-->
+<!--        <p>${Wind}</p>-->
+<!--        <p>${Pressure}</p>-->
+<!--    </div>-->
+<!--</div>-->
