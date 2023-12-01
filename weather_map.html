@@ -8,18 +8,103 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
 
     <style>
+        body.Clouds {
+            /*background-color: #b0c4de; !* Light Blue for Clouds *!*/
+            background-image: url("image/cloudy_background.jpg");
+            background-size: cover;
+        }
+
+        body.Clear {
+            /*background-color: #87ceeb; !* Sky Blue for Clear *!*/
+            background-image: url("image/clear_background.jpg");
+            background-size: cover;
+        }
+
+        body.Rain {
+            /*background-color: #4682b4; !* Steel Blue for Rain *!*/
+            background-image: url("image/rain_background.jpg");
+            background-size: cover;
+        }
+
+        body.Drizzle {
+            /*background-color: #87cefa; !* Light Sky Blue for Drizzle *!*/
+            background-image: url("image/drizzle_background.jpg");
+            background-size: cover;
+        }
+
+        body.Mist {
+            /*background-color: #d3d3d3; !* Light Gray for Mist *!*/
+            background-image: url("image/drizzle_background.jpg");
+            background-size: cover;
+        }
+
+        body.Snow {
+            /*background-color: #fffafa; !* Snow for Snow *!*/
+            background-image: url("image/snow_background.jpg");
+            background-size: cover;
+        }
+
+        body.Default {
+            /* Default background styles */
+            background-image: url("image/cloudy_background.jpg");
+            background-size: contain;
+        }
+
+        #weather-form{
+            margin-left: 5%;
+        }
+
         #map {
-            width: 100%;
-            height: 600px;
+            width: 90%;
+            height: 400px;
+            margin-left: 5%;
+            box-shadow: 1px 2px 10px rgba(0, 44, 255, 0.8);
+            position: fixed;
+            bottom: 20px;
         }
 
         #weatherOutput {
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin: 20px auto;
+            justify-content: space-between;
+            width: 90%;
+            align-items: center;
+        }
+        .card {
+            max-width: 250px;
+            max-height: 350px;
+            font-size: .75em;
+            box-shadow: 1px 2px 10px rgba(0, 44, 255, 0.8);
+        }
+        .card-img-top {
+            max-height: 100px;
+            max-width: 100px;
+        }
+        /*.map-container{*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*}*/
+        #title-bar{
+            background: #0a58ca;
+            margin-bottom: 1.5em;
+            justify-content: space-between;
+        }
+        #current-city{
+            color: #F0F0F0;
+            text-wrap: none;
+        }
+        .title {
+            color: #F0F0F0;
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
+<div class="row" id="title-bar">
+    <div class="col-3" id="title-container">
+        <h1 class="title">Weather App</h1>
+    </div>
+    <div class="col-2 mt-3" id="current-city"></div>
+</div>
 
 <form id="weather-form">
     <label for="cityName">City Name:</label>
@@ -29,8 +114,9 @@
 
 <div class="row" id="weatherOutput"></div>
 
+<div class="map-container">
 <div id="map"></div>
-
+</div>
 <script src="js/keys.js"></script>
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
@@ -38,14 +124,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<!--<div class="card col-md-2" style="width: 18rem;">-->
-<!--    <img src="..." class="card-img-top" alt="...">-->
-<!--    <div class="card-body">-->
-<!--        <p>${Description}</p>-->
-<!--        <p>${Temp}</p>-->
-<!--        <p>${Humidity}</p>-->
-<!--        <p>${Wind}</p>-->
-<!--        <p>${Pressure}</p>-->
-<!--    </div>-->
-<!--</div>-->

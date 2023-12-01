@@ -26,12 +26,12 @@ function reverseGeocode(coordinates, token) {
 }
 
 // Function to add a marker to the map (unchanged)
-function addMarker(coordinates) {
-    // Create a new marker and add it to the map
-    new mapboxgl.Marker({ draggable: true })
-        .setLngLat(coordinates)
-        .addTo(map);
-}
+// function addMarker(coordinates) {
+//     // Create a new marker and add it to the map
+//     new mapboxgl.Marker({ draggable: true })
+//         .setLngLat(coordinates)
+//         .addTo(map);
+// }
 
 // Map initialization (unchanged)
 mapboxgl.accessToken = MAPBOX_API;
@@ -47,7 +47,7 @@ let marker = new mapboxgl.Marker({ draggable: true })
     .setLngLat([-96.74640775941502, 33.02017252444113])
     .addTo(map);
 
-// Event listener for form submission (modified)
+// Event listener for form submission
 document.getElementById("weather-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -63,12 +63,21 @@ document.getElementById("weather-form").addEventListener("submit", function (eve
             // Update the map center
             map.setCenter(result);
 
+            // Fetch weather data and update the weather output
             fetchWeather(cityNameInput);
+
+            // Reverse geocode to get the new weather condition and set the body class
+            reverseGeocode(result, MAPBOX_API)
+                .then(function (weatherMain) {
+                    document.body.className = weatherMain;
+
+                    // Clear the search bar
+                    document.getElementById("cityName").value = "";
                 });
         });
+});
 
 
-//Event listener for marker dragend (modified)
 marker.on('dragend', function () {
     // Get the marker's new position
     let newCoordinates = marker.getLngLat();
@@ -76,12 +85,17 @@ marker.on('dragend', function () {
     // Reverse geocode to get the new city name
     reverseGeocode(newCoordinates, MAPBOX_API)
         .then(function (cityName) {
-            // console.log(cityName)
             // Update the new city name
             newCityName = cityName;
 
             // Fetch weather data and update the weather output
             fetchWeather(newCityName);
+
+            // Reverse geocode to get the new weather condition and set the body class
+            reverseGeocode(newCoordinates, MAPBOX_API)
+                .then(function (weatherMain) {
+                    document.body.className = weatherMain;
+                });
         });
 });
 
@@ -115,6 +129,7 @@ function getWeatherIconURL(weatherMain) {
         'Rain': 'Image/rain.png',
         'Drizzle': 'Image/drizzle.png',
         'Mist': 'Image/mist.png',
+        'Snow': 'Image/snow.png',
         // Add more conditions as needed
     };
 
@@ -126,29 +141,34 @@ function getWeatherIconURL(weatherMain) {
 function updateWeatherOutput(weatherData) {
     // Access relevant data from the OpenWeather API response and update the HTML
     const weatherOutputElement = document.getElementById('weatherOutput');
-
+    const cityOutputElement = document.getElementById('current-city')
+    const bodyElement = document.body;
     // Clear previous content
     weatherOutputElement.innerHTML = '';
-
+    cityOutputElement.innerHTML = '';
     // Display relevant information
     const cityName = weatherData.city.name;
+    const currentWeather = weatherData.list[0].weather[0].main
+
+    document.body.className= currentWeather
 
     // Create a heading with the city name
-    const cityHeading = document.createElement('h2');
+    const cityHeading = document.createElement('h5');
     cityHeading.textContent = `Weather in ${cityName}`;
-    weatherOutputElement.appendChild(cityHeading);
+    cityOutputElement.appendChild(cityHeading);
 
     // Loop through forecast data with a step of 8 to grab every 8th entry
     for (let i = 0; i < weatherData.list.length; i += 8) {
         // Extract relevant data for each time period
         const forecast = weatherData.list[i];
         const date = new Date(forecast.dt * 1000); // Convert timestamp to date
-        const temperature = forecast.main.temp;
-        const description = forecast.weather[0].description;
+        const temperature = Math.round(forecast.main.temp);
+        const description =  forecast.weather[0].description;
         const humidity = forecast.main.humidity;
-        const windSpeed = forecast.wind.speed;
+        const windSpeed = Math.round(forecast.wind.speed);
         const pressure = forecast.main.pressure;
         const weatherMain = forecast.weather[0].main;
+
 
         // Create a Bootstrap card for each forecast entry
         const cardDiv = document.createElement('div');
@@ -164,6 +184,11 @@ function updateWeatherOutput(weatherData) {
         // Card body
         const cardBody = document.createElement('div');
         cardBody.classList.add('card-body');
+
+        //Date element
+        const dateElement = document.createElement('p');
+        dateElement.textContent = `${date.toLocaleDateString()}`;
+        cardBody.appendChild(dateElement)
 
         // Display description, temperature, humidity, wind speed, and pressure inside the card body
         const descriptionElement = document.createElement('p');
