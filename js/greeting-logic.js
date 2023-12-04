@@ -26,7 +26,7 @@ const greetings =
         "Pleased to meet you"
     ];
 
-export function randomGreeting() {
+export default function randomGreeting() {
     const randomIndex = randomNumber(0, greetings.length - 1);
     return greetings[randomIndex];
 }

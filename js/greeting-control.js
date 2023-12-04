@@ -1,4 +1,4 @@
-import {randomGreeting} from "./greeting-logic.js";
+import randomGreeting from "./greeting-logic.js";
 
 function giveGreeting() {
     document.querySelector("#greet-button").addEventListener("click", greetUser);
@@ -13,5 +13,4 @@ function greetUser() {
     document.querySelector("#greeting").innerText = greeting;
 
 }
-
 giveGreeting();
