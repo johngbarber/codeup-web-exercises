@@ -1,0 +1,85 @@
+body.Clouds {
+
+    background-image: url("image/cloudy_background.jpg");
+    background-size: cover;
+}
+
+body.Clear {
+
+    background-image: url("image/clear_background.jpg");
+    background-size: cover;
+}
+
+body.Rain {
+
+    background-image: url("image/rain_background.jpg");
+    background-size: cover;
+}
+
+body.Drizzle {
+
+    background-image: url("image/drizzle_background.jpg");
+    background-size: cover;
+}
+
+body.Mist {
+
+    background-image: url("image/drizzle_background.jpg");
+    background-size: cover;
+}
+
+body.Snow {
+
+    background-image: url("image/snow_background.jpg");
+    background-size: cover;
+}
+
+body.Default {
+
+    background-image: url("image/cloudy_background.jpg");
+    background-size: contain;
+}
+
+#weather-form{
+    margin-left: 5%;
+}
+
+#map {
+    width: 90%;
+    height: 400px;
+    margin-left: 5%;
+    box-shadow: 1px 2px 10px rgba(0, 44, 255, 0.8);
+    position: fixed;
+    bottom: 20px;
+}
+
+#weatherOutput {
+    margin: 20px auto;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+.card {
+    max-width: 250px;
+    max-height: 350px;
+    font-size: .75em;
+    box-shadow: 1px 2px 10px rgba(0, 44, 255, 0.8);
+}
+.card-img-top {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+#title-bar{
+    background: #0a58ca;
+    margin-bottom: 1.5em;
+    justify-content: space-between;
+}
+#current-city{
+    color: #F0F0F0;
+    text-wrap: none;
+}
+.title {
+    color: #F0F0F0;
+    margin-left: 20px;
+}

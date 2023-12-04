@@ -25,13 +25,6 @@ function reverseGeocode(coordinates, token) {
         });
 }
 
-// Function to add a marker to the map (unchanged)
-// function addMarker(coordinates) {
-//     // Create a new marker and add it to the map
-//     new mapboxgl.Marker({ draggable: true })
-//         .setLngLat(coordinates)
-//         .addTo(map);
-// }
 
 // Map initialization (unchanged)
 mapboxgl.accessToken = MAPBOX_API;
@@ -130,7 +123,6 @@ function getWeatherIconURL(weatherMain) {
         'Drizzle': 'Image/drizzle.png',
         'Mist': 'Image/mist.png',
         'Snow': 'Image/snow.png',
-        // Add more conditions as needed
     };
 
     // Default to a generic icon if the weather condition is not in the map
