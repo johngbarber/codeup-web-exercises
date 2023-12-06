@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="posts"></div>
+
+<script>
+    const postsDiv = document.querySelector("#posts");
+
+    fetch("data/blog.json")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            data.forEach(blogPost => {
+                const postDiv = document.createElement("div");
+                postDiv.innerHTML = `
+                <h2>${blogPost.title}</h2>
+                <p>${blogPost.content}</p>
+                <p>${blogPost.date}</p>
+                `
+
+                postsDiv.appendChild(postDiv)
+            })
+        })
+
+
+</script>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 "use strict";
 
+
 // Global variables
 let newCityName;
 

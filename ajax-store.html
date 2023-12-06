@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>Online Store</title>
+
+    <style>
+        body {
+            font-family: NewRodin, sans-serif;
+            background: #EFE9F4;
+        }
+
+        table, tr, td, th {
+            border: 1px solid #171D1C;
+        }
+
+        td, th {
+            padding: .5em;
+        }
+    </style>
 </head>
 <body>
 
@@ -9,12 +24,12 @@
 
 <table id="products">
     <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
@@ -22,6 +37,40 @@
 <script>
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+    const productTable = document.querySelector("#insertProducts");
+
+    fetch("data/inventory.json")
+        .then(response => response.json())
+        .then(data => {
+            for(let item of data) {
+                const newRow = document.createElement("tr");
+                const title = document.createElement("td")
+                const quantity = document.createElement("td")
+                const categories = document.createElement("td");
+                const price = document.createElement("td");
+                //     ---------------------------------
+                title.innerText = item.title;
+                quantity.innerText = item.quantity;
+                categories.innerText = item.categories;
+                price.innerText = item.price;
+
+                newRow.appendChild(title)
+                newRow.appendChild(quantity)
+                newRow.appendChild(price)
+                newRow.appendChild(categories)
+
+                productTable.appendChild(newRow)
+            }
+        })
+
+
+
+
+
+
+
+
+
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
